@@ -1,0 +1,112 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/outfit_activity_horizontal_margin"
+    android:paddingRight="@dimen/outfit_activity_horizontal_margin"
+    android:paddingTop="@dimen/outfit_activity_vertical_margin"
+    android:paddingBottom="@dimen/outfit_activity_vertical_margin"
+    tools:context=".IFTW$PlaceholderFragment">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/mainOuterLayout">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/shirtFrameLayout">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/shirtImageView"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/shirt_red"
+                android:adjustViewBounds="true"
+                android:layout_weight="1"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:text="IF THIS"
+                android:id="@+id/shirtTextView"
+                style="@style/overlayTextView" />
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/bottomLinearLayout"
+            android:layout_weight="1">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/pantsFrameLayout"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/pantsImageView"
+                    android:src="@drawable/blue_pants"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop" />
+                <TextView
+                    android:text="WEAR THIS"
+                    android:id="@+id/pantsTextView"
+                    style="@style/overlayTextView" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/bottomRightLinearLayout"
+                android:layout_weight="1">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:id="@+id/shoesFrameLayout"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/shoesImageView"
+                        android:src="@drawable/shoes"
+                        android:scaleType="centerCrop"
+                        android:adjustViewBounds="true" />
+
+                    <TextView
+                        android:text="AND THAT"
+                        android:id="@+id/shoesTextView"
+                        style="@style/overlayTextView" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:id="@+id/buttonFrameLayout"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Roll Again"
+                        android:id="@+id/reloadOutfitButton"
+                        android:background="#b19636"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/white" />
+                </FrameLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
